@@ -226,3 +226,16 @@ The matchmaking system uses different profile query combinations based on the mi
    - **Critical Phase:** This facet-graph architecture phase is really crucial for final optimization
    - **Filtering Suggestions:** Do you have any suggestions for the filtering mechanisms for the new facets introduced?
 
+3) **Filtering System Design and Hard Filters Recommendations**
+   - **Multi-value Filtering:** For multi-values (e.g., specialties: "anatomy, physiology"), the idea is clear - find the seeker value in the list
+   - **Rates Band Filtering:** What are your suggestions for filtering rates band? Should it be:
+     - Exact match ($, $$, $$$, $$$$)?
+     - Range-based filtering (if user wants $$, show $$ and below)?
+     - Dollar range filtering (50-90$, 100-200$, 500-1000$)?
+   - **Hard Filters for Each Mission:**
+     - **student_peer:** What should be the mandatory hard filters? (step, location, timeZone, studyStyle?)
+     - **tutor:** What should be the mandatory hard filters? (stepsTaught, location, timeZone, ratesBand, specialties?)
+     - **resident:** What should be the mandatory hard filters? (specialty, pgy, location, timeZone?)
+     - **student:** What should be the mandatory hard filters? (studyStylePreference, studentIntentPreference, location?)
+   - **Filter Priority:** How should the system prioritize which filters to relax first when no matches are found?
+
